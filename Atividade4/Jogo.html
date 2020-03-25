@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pedra, Papel ou Tesoura</title>
+<script> 
+    var a;
+    var b;
+    var d;
+    
+    d=prompt("Faça sua escolha :\nPedra = 1 \nPapel = 2 \nTesoura = 3");
+    a = Number.parseFloat(d);
+    b = 0;
+    do{
+    b = (Math.random()/3)*10;
+    }while(b<1)    
+    b = Math.trunc(b);
+document.writeln(a);        
+ document.writeln(b);     
+    if (((a == 1) && (b == 2))||
+        ((a == 2) && (b == 3)) ||
+        ((a == 3) && (b == 1))){
+        document.write("Você Perdeu!!<br>");
+    }
+    else if (((a == 1) && (b == 3))||
+            ((a == 2) && (b == 1)) ||
+            ((a == 3) && (b == 2))){
+        document.write("Você Ganhou!!<br>");
+    }
+    else if(a == b){
+        document.write("Empate!!<br>");
+    }
+    
+    
+</script>
+</head>
+<body>
+</body>
+</html>
