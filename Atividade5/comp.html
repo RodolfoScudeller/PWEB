@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Comparação</title>
+<script> 
+    var a;
+    var b;
+    var c;
+    var d;    
+    var ope;
+    
+    d=prompt("Digite o Primeiro Numero: ");
+    a=Number.parseFloat(d);
+    d=prompt("Digite o Segundo Numero: ");
+    b=Number.parseFloat(d);
+    c=prompt("Digite o Terceiro Numero: ");
+    b=Number.parseFloat(d);
+    
+    if((a > b) && (a > c) && (a!=b) && (a!=c)){
+        document.write("O maior numero é: " + a);
+    }
+    if((c > b) && (c > a )&& (c!=b) && (c!=a)){
+        document.write("O maior numero é: " + c);
+    }
+    if((b > a) && (b > c) && (b!=a) && (b!=c)){
+        document.write("O maior numero é: " + b);
+    }
+    if((a > b) && (a == c)){
+        document.write("O maior numero é: " + a + " e " + c);
+    }
+    if((c > b) && (c == a )){
+        document.write("O maior numero é: " + c + " e " + a);
+    }
+    if((b > a) && (b == c)){
+        document.write("O maior numero é: " + b + " e " + c);
+    }
+    if((b > c) && (b == a)){
+        document.write("O maior numero é: " + b + " e " + a);
+    }
+    if((a == c) && (b == c)){
+        document.write("Todos os numeros sao iguais!");
+    }
+    
+        
+    
+</script>
+</head>
+<body>
+</body>
+</html>
