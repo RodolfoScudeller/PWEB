@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conta</title>
+</head>
+<body>
+    <script>        
+        function Conta(){
+            var nome;
+            var banco;
+            var nConta;
+            var saldo;
+        
+            
+            this.setNome = function(varNome){
+               nome = varNome;
+            };
+            this.setBanco = function(varBanco){
+                banco = varBanco;
+            };
+            this.setnConta = function(varnConta){
+                nConta = varnConta;
+            };
+            this.setSaldo = function(varSaldo){
+                saldo = varSaldo;
+            };
+            this.getNome = function(){
+                return nome;
+            };
+            this.getBanco = function(){
+                return banco;
+            };
+            this.getnConta = function(){
+                return nConta;
+            };
+            this.getSaldo = function(){
+                return saldo;
+            };
+        }
+        function Poupanca(){
+            var juros;
+            var dataVcto;
+            
+            this.getJuros = function(){
+                return juros;
+            };
+            this.getdataVcto = function(){
+                return dataVcto;
+            };
+            this.setJuros = function(varJuros){
+                juros = varJuros;
+            };
+            this.setdataVcto = function(vardataVcto){
+                dataVcto = vardataVcto;
+            };
+        }
+        function Corrente(){
+            var saldoEspecial;
+            
+            this.getsaldoEspecial = function(){
+                return saldoEspecial;
+            };
+            this.setsaldoEspecial = function(varsaldoEspecial){
+                saldoEspecial = varsaldoEspecial;
+            };
+        }
+        
+        Corrente.prototype = new Conta();
+        Poupanca.prototype = new Conta();
+        
+        nCorrente = new Corrente();
+        nPoupanca = new Poupanca();
+        
+        
+        nCorrente.setNome('Marlindo');
+        nCorrente.setBanco('Bradesco');
+        nCorrente.setnConta('12345');
+        nCorrente.setSaldo('120,00');
+        nCorrente.setsaldoEspecial('300,00');
+        
+        
+        
+        nPoupanca.setNome('Marcondes');
+        nPoupanca.setBanco('Caixa');
+        nPoupanca.setnConta('54321');
+        nPoupanca.setSaldo('45.325,00');
+        nPoupanca.setJuros('0,31% a.m.');
+        nPoupanca.setdataVcto('13/07/2022');
+                
+        alert('Conta Corrente:\n' + 
+              'Nome: ' + nCorrente.getNome() + '\n' +
+             'Banco: ' + nCorrente.getBanco() + '\n' +
+             'Conta: ' + nCorrente.getnConta() + '\n' +
+             'Saldo: R$ ' + nCorrente.getSaldo() + '\n' +
+             'Saldo Especial: R$ ' + nCorrente.getsaldoEspecial());
+        
+        alert('Conta Poupança:\n' + 
+              'Nome: ' + nPoupanca.getNome() + '\n' +
+             'Banco: ' + nPoupanca.getBanco() + '\n' +
+             'Conta: ' + nPoupanca.getnConta() + '\n' +
+             'Saldo: R$ ' + nPoupanca.getSaldo() + '\n' +
+             'Juros: ' +  nPoupanca.getJuros() + '\n' +
+             'Data de Vencimento: ' + nPoupanca.getdataVcto());
+        
+            </script>
+</body>
+</html>
+
+
+
+
+
+

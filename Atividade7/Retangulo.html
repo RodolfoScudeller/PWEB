@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Retangulo </title>
+</head>
+<body>
+<script>
+     function Retangulo(x,y){
+         this.x=x;
+         this.y=y;
+         
+         this.getCalculo = function(){
+             return(x*y);
+         };
+     }
+         var Retangulo = new Retangulo(10,3);
+         
+         alert("A area do retando com Altura 10 e Base 3 é = " + Retangulo.getCalculo());
+       
+        
+</script>
+</body>
+</html>
