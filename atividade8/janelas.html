@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Janelas - Atividade 8 </title>
+</head>
+<body>
+    <img
+    src = "fechada.png"
+    width="500"
+    height="500"
+    id = "janela"
+    onmouseover = "janelas(event)"
+    onmouseout = "janelas(event)"
+    onclick = "janelas(event)">
+
+
+    <script>
+    
+        function janelas(event){
+            var type = event.type;
+            
+            if(type === 'mouseover'){
+                document.getElementById('janela').src ="aberta.png" 
+            }
+            else if (type === 'mouseout'){
+                document.getElementById('janela').src ="fechada.png"
+            }
+            else{
+                document.getElementById('janela').src = "quebrada.png"
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
