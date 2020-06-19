@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Atividade 10 </title>
+    <script src="form.js"></script>
+</head>
+<body>
+   <h1> Formulário </h1>
+    <form name="form" onsubmit="return Validacao()" method="post">
+    
+    <label for="nome">Nome: </label><br>
+    <input type="text" id="nome" class="inpt"><br>
+    
+    <label for="email">Email: </label><br>
+    <input type="email" id="email" class="inpt"><br>
+    
+    <label for="comentario">Comentario: </label><br>
+    <input type="text" id="comentario" class="inpt" style="width: 300px; height: 200px;"><br><br>
+    
+    Pesquisa <br><br>
+    
+    Primeira vez na pagina?<br><br>
+        
+    <input type="radio" id="r1" value="sim"> Sim 
+    <input type="radio" id="r2" value="nao"> Não <br><br>
+    
+    <input type="submit" value="Enviar">
+    <input type="submit" value="Limpar">
+</form>  
+</body>
+</html>
